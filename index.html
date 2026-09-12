@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3b60" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Ortho Onc" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Orthopaedic Oncology Pocket Guide</title>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Clinical pocket guide</p>
+      <h1>Orthopaedic Oncology</h1>
+    </div>
+    <button id="themeToggle" class="icon-button" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <main>
+    <section class="notice">
+      <strong>For clinician education only.</strong> Verify management decisions with current institutional protocols, specialty guidance, and attending judgment. Do not enter PHI.
+    </section>
+
+    <nav class="tabs" aria-label="App sections">
+      <button class="tab active" data-tab="library">Tumor Library</button>
+      <button class="tab" data-tab="mirels">Mirels</button>
+      <button class="tab" data-tab="templates">Templates</button>
+      <button class="tab" data-tab="pearls">Pearls</button>
+    </nav>
+
+    <section id="library" class="panel active">
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search tumors, location, imaging…" autocomplete="off" />
+      </div>
+      <div class="filters" id="filters"></div>
+      <div id="tumorList" class="card-list"></div>
+    </section>
+
+    <section id="mirels" class="panel">
+      <article class="card">
+        <h2>Mirels score</h2>
+        <p class="muted">A commonly used framework for estimating pathologic fracture risk in long-bone metastatic disease. Clinical context still matters.</p>
+        <div class="form-grid">
+          <label>Site
+            <select id="mSite">
+              <option value="1">Upper limb — 1</option>
+              <option value="2">Lower limb — 2</option>
+              <option value="3">Peritrochanteric — 3</option>
+            </select>
+          </label>
+          <label>Pain
+            <select id="mPain">
+              <option value="1">Mild — 1</option>
+              <option value="2">Moderate — 2</option>
+              <option value="3">Functional — 3</option>
+            </select>
+          </label>
+          <label>Lesion type
+            <select id="mLesion">
+              <option value="1">Blastic — 1</option>
+              <option value="2">Mixed — 2</option>
+              <option value="3">Lytic — 3</option>
+            </select>
+          </label>
+          <label>Size
+            <select id="mSize">
+              <option value="1">&lt; 1/3 diameter — 1</option>
+              <option value="2">1/3–2/3 diameter — 2</option>
+              <option value="3">&gt; 2/3 diameter — 3</option>
+            </select>
+          </label>
+        </div>
+        <button id="calcMirels" class="primary">Calculate</button>
+        <div id="mirelsResult" class="result" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="templates" class="panel">
+      <div id="templateList" class="card-list"></div>
+    </section>
+
+    <section id="pearls" class="panel">
+      <div class="card-list">
+        <article class="card"><h2>Imaging workflow</h2><p>Start with orthogonal radiographs for osseous lesions. MRI characterizes marrow/soft-tissue extent; CT better defines cortical detail and mineralization. Stage suspected malignancy before biopsy when feasible.</p></article>
+        <article class="card"><h2>Biopsy principle</h2><p>Biopsy trajectory should be planned with the definitive surgical team so the tract can be excised with the specimen and critical compartments are not contaminated.</p></article>
+        <article class="card"><h2>Red flags</h2><p>Escalate new neurovascular deficit, rapidly progressive pain/swelling, threatened skin, fever with wound concerns, or suspected pathologic fracture.</p></article>
+        <article class="card"><h2>Documentation</h2><p>For limb exams, document skin/incision, tenderness/mass, ROM, motor groups, sensation by named distributions when possible, distal perfusion, and relevant gait or assistive device.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built as an offline-capable PWA for iPhone.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
