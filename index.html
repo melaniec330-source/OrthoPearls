@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#062a4b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="OrthoPearls">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>OrthoPearls</title>
+</head>
+<body>
+<div id="app">
+  <header id="topbar" class="topbar is-hidden">
+    <button id="backBtn" class="icon-btn" aria-label="Back">‹</button>
+    <div id="topTitle" class="top-title">OrthoPearls</div>
+    <button id="favBtn" class="icon-btn fav-btn is-hidden" aria-label="Favorite">☆</button>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="bottom-nav">
+    <button data-route="home" class="nav-item"><span>⌂</span><small>Home</small></button>
+    <button data-route="search" class="nav-item"><span>⌕</span><small>Search</small></button>
+    <button data-route="favorites" class="nav-item"><span>☆</span><small>Favorites</small></button>
+    <button data-route="settings" class="nav-item"><span>⚙︎</span><small>Settings</small></button>
+  </nav>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
