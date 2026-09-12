@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#062B4C" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="OrthoPearls" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>OrthoPearls</title>
+</head>
+<body>
+  <div id="app">
+    <header id="topBar" class="top-bar hidden">
+      <button id="backButton" class="nav-icon" aria-label="Back">‹</button>
+      <div class="top-title" id="topTitle">OrthoPearls</div>
+      <button id="topFavorite" class="nav-icon star-button hidden" aria-label="Favorite">☆</button>
+    </header>
+
+    <main id="mainContent">
+      <section id="home" class="page active home-page" data-title="OrthoPearls">
+        <div class="hero">
+          <div class="hero-xray" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <h1>OrthoPearls</h1>
+            <p class="hero-subtitle">Orthopaedic Oncology</p>
+            <p class="hero-tagline">Learn. Apply. Excel.</p>
+          </div>
+          <button class="search-launch" data-open-search>
+            <span>⌕</span><span>Search tumors, anatomy, imaging…</span>
+          </button>
+        </div>
+
+        <div class="home-grid">
+          <button class="home-card" data-page="anatomy">
+            <span class="home-icon">◒</span><span class="home-label">Orthopaedic Anatomy</span><span class="home-sub">Regional · Neurovascular</span>
+          </button>
+          <button class="home-card" data-page="physical-exam">
+            <span class="home-icon">♧</span><span class="home-label">Physical Exam</span><span class="home-sub">How to test · What it means</span>
+          </button>
+          <button class="home-card" data-page="benign-tumors">
+            <span class="home-icon">◢</span><span class="home-label">Benign Tumors</span><span class="home-sub">Bone &amp; Soft Tissue</span>
+          </button>
+          <button class="home-card" data-page="malignant-tumors">
+            <span class="home-icon">◆</span><span class="home-label">Malignant Tumors</span><span class="home-sub">Bone &amp; Soft Tissue</span>
+          </button>
+          <button class="home-card" data-page="metastatic">
+            <span class="home-icon">✣</span><span class="home-label">Metastatic Bone Disease</span><span class="home-sub">Evaluation · Management</span>
+          </button>
+          <button class="home-card" data-page="imaging">
+            <span class="home-icon">▣</span><span class="home-label">Imaging Principles</span><span class="home-sub">XR · CT · MRI · US · NM</span>
+          </button>
+          <button class="home-card wide" data-page="quiz">
+            <span class="home-icon">?</span><span class="home-label">Quiz &amp; Learning</span><span class="home-sub">Customizable practice</span>
+          </button>
+        </div>
+        <p class="home-motto">“Better clinicians. Better outcomes.”</p>
+      </section>
+
+      <section id="search" class="page" data-title="Search">
+        <div class="page-pad">
+          <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search OrthoPearls…" autocomplete="off" /></div>
+          <div id="searchResults" class="list-stack"></div>
+        </div>
+      </section>
+
+      <section id="favorites" class="page" data-title="Favorites">
+        <div class="page-pad">
+          <div class="section-heading"><p class="kicker">Saved reference</p><h2>Favorites</h2><p>Star pages you want at your fingertips.</p></div>
+          <div id="favoritesList" class="list-stack"></div>
+        </div>
+      </section>
+
+      <section id="anatomy" class="page" data-title="Orthopaedic Anatomy">
+        <div class="page-pad">
+          <div class="section-heading"><p class="kicker">Regional anatomy</p><h2>Orthopaedic Anatomy</h2><p>Clinically relevant osteology, compartments, neurovascular relationships, biomechanics, and examination.</p></div>
+          <div class="list-stack">
+            <button class="row-card" data-detail="pelvis"><span class="thumb anatomy-thumb">◒</span><span><b>Pelvis &amp; Hip</b><small>Bones · joints · muscles · nerves</small></span><i>›</i></button>
+            <button class="row-card" data-detail="femur"><span class="thumb anatomy-thumb">╱</span><span><b>Femur &amp; Thigh</b><small>Proximal/distal femur · compartments</small></span><i>›</i></button>
+            <button class="row-card" data-detail="knee"><span class="thumb anatomy-thumb">◉</span><span><b>Knee</b><small>Joint · extensor mechanism · popliteal anatomy</small></span><i>›</i></button>
+            <button class="row-card" data-detail="tibia"><span class="thumb anatomy-thumb">║</span><span><b>Tibia &amp; Fibula</b><small>Compartments · vessels · common fibular nerve</small></span><i>›</i></button>
+            <button class="row-card" data-detail="shoulder"><span class="thumb anatomy-thumb">⌒</span><span><b>Shoulder &amp; Shoulder Girdle</b><small>Scapula · clavicle · proximal humerus · axilla</small></span><i>›</i></button>
+            <button class="row-card" data-detail="humerus"><span class="thumb anatomy-thumb">│</span><span><b>Humerus &amp; Arm</b><small>Compartments · radial nerve · brachial vessels</small></span><i>›</i></button>
+            <button class="row-card" data-detail="upper-extremity"><span class="thumb anatomy-thumb">✋</span><span><b>General Upper Extremity</b><small>Elbow · forearm · wrist · hand</small></span><i>›</i></button>
+            <button class="row-card" data-detail="nerves"><span class="thumb anatomy-thumb">⌁</span><span><b>Peripheral Nerve Innervation</b><small>Roots · course · motor · sensory · how to test</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="physical-exam" class="page" data-title="Physical Exam">
+        <div class="page-pad">
+          <div class="section-heading"><p class="kicker">Examination</p><h2>Orthopaedic Physical Exam</h2><p>Every examination page uses the same quick-reference testing framework.</p></div>
+          <div class="info-card test-card"><div class="card-heading">♧ <b>How to Test</b></div><ol><li><b>Patient position</b></li><li><b>Maneuver</b></li><li><b>Normal response</b></li><li><b>Abnormal finding</b></li><li><b>What it may indicate</b></li></ol></div>
+          <div class="list-stack">
+            <button class="row-card" data-detail="general-tumor-exam"><span class="thumb">◌</span><span><b>General Tumor Exam</b><small>Mass characterization · skin · tenderness · function</small></span><i>›</i></button>
+            <button class="row-card" data-detail="upper-exam"><span class="thumb">✋</span><span><b>Upper Extremity</b><small>ROM · motor · sensory · pulses</small></span><i>›</i></button>
+            <button class="row-card" data-detail="lower-exam"><span class="thumb">↟</span><span><b>Lower Extremity</b><small>Gait · ROM · strength · sensation · perfusion</small></span><i>›</i></button>
+            <button class="row-card" data-detail="postop-exam"><span class="thumb">✓</span><span><b>Post-operative Exam</b><small>Incision · swelling · neurovascular status · ROM</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="benign-tumors" class="page" data-title="Benign Tumors">
+        <div class="page-pad">
+          <div class="section-heading"><p class="kicker">Bone &amp; soft tissue</p><h2>Benign Tumors</h2><p>Unified searchable list with diagnosis tags and textbook-linked references.</p></div>
+          <div class="filter-row"><button class="chip active">All</button><button class="chip">Bone</button><button class="chip">Soft Tissue</button><button class="chip">Tumor-like</button></div>
+          <div class="list-stack tumor-list">
+            <button class="row-card" data-detail="osteochondroma"><span class="thumb xray-thumb">XR</span><span><b>Osteochondroma</b><small>Bone · Cartilage-capped</small></span><i>›</i></button>
+            <button class="row-card" data-detail="enchondroma"><span class="thumb xray-thumb">XR</span><span><b>Enchondroma</b><small>Bone · Cartilage</small></span><i>›</i></button>
+            <button class="row-card" data-detail="osteoid-osteoma"><span class="thumb xray-thumb">CT</span><span><b>Osteoid Osteoma</b><small>Bone · Bone-forming</small></span><i>›</i></button>
+            <button class="row-card" data-detail="chondroblastoma"><span class="thumb xray-thumb">MR</span><span><b>Chondroblastoma</b><small>Bone · Cartilage</small></span><i>›</i></button>
+            <button class="row-card" data-detail="nonossifying-fibroma"><span class="thumb xray-thumb">XR</span><span><b>Non-ossifying Fibroma</b><small>Bone · Fibrous</small></span><i>›</i></button>
+            <button class="row-card" data-detail="fibrous-dysplasia"><span class="thumb xray-thumb">XR</span><span><b>Fibrous Dysplasia</b><small>Bone · Fibrous</small></span><i>›</i></button>
+            <button class="row-card" data-detail="unicameral-bone-cyst"><span class="thumb xray-thumb">XR</span><span><b>Unicameral Bone Cyst</b><small>Bone · Cystic</small></span><i>›</i></button>
+            <button class="row-card" data-detail="aneurysmal-bone-cyst"><span class="thumb xray-thumb">MR</span><span><b>Aneurysmal Bone Cyst</b><small>Bone · Cystic</small></span><i>›</i></button>
+            <button class="row-card" data-detail="lipoma"><span class="thumb xray-thumb">MR</span><span><b>Lipoma</b><small>Soft Tissue · Lipomatous</small></span><i>›</i></button>
+            <button class="row-card" data-detail="schwannoma"><span class="thumb xray-thumb">MR</span><span><b>Schwannoma</b><small>Soft Tissue · Neural</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="malignant-tumors" class="page" data-title="Malignant Tumors">
+        <div class="page-pad">
+          <div class="section-heading"><p class="kicker">Bone &amp; soft tissue</p><h2>Malignant Tumors</h2><p>Primary malignancies organized using the same concise tumor-page template, with staging and workup added.</p></div>
+          <div class="list-stack">
+            <button class="row-card" data-detail="osteosarcoma"><span class="thumb xray-thumb">XR</span><span><b>Osteosarcoma</b><small>Bone · Osteoid-producing</small></span><i>›</i></button>
+            <button class="row-card" data-detail="chondrosarcoma"><span class="thumb xray-thumb">MR</span><span><b>Chondrosarcoma</b><small>Bone · Cartilage-producing</small></span><i>›</i></button>
+            <button class="row-card" data-detail="ewing"><span class="thumb xray-thumb">XR</span><span><b>Ewing Sarcoma</b><small>Bone · Round-cell sarcoma</small></span><i>›</i></button>
+            <button class="row-card" data-detail="myeloma"><span class="thumb xray-thumb">CT</span><span><b>Multiple Myeloma</b><small>Followed as organized in OKU</small></span><i>›</i></button>
+            <button class="row-card" data-detail="lymphoma"><span class="thumb xray-thumb">MR</span><span><b>Lymphoma of Bone</b><small>Followed as organized in OKU</small></span><i>›</i></button>
+            <button class="row-card" data-detail="soft-tissue-sarcoma"><span class="thumb xray-thumb">MR</span><span><b>Soft-Tissue Sarcomas</b><small>Evaluation · staging · management</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="metastatic" class="page" data-title="Metastatic Bone Disease">
+        <div class="page-pad"><div class="section-heading"><p class="kicker">Dedicated section</p><h2>Metastatic Bone Disease</h2><p>Workup, mechanical risk, pathologic fracture, upper/lower extremity decision-making, and multidisciplinary management.</p></div>
+          <div class="list-stack">
+            <button class="row-card" data-detail="metastatic-workup"><span class="thumb">⌕</span><span><b>Approach to Bone Metastasis</b><small>History · imaging · labs · diagnosis</small></span><i>›</i></button>
+            <button class="row-card" data-detail="mirels"><span class="thumb">#</span><span><b>Mirels Score</b><small>Impending fracture risk quick tool</small></span><i>›</i></button>
+            <button class="row-card" data-detail="upper-metastasis"><span class="thumb">↑</span><span><b>Upper Extremity</b><small>Surgical management principles</small></span><i>›</i></button>
+            <button class="row-card" data-detail="lower-metastasis"><span class="thumb">↓</span><span><b>Lower Extremity</b><small>Mechanical stability · reconstruction</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="imaging" class="page" data-title="Imaging Principles">
+        <div class="page-pad"><div class="section-heading"><p class="kicker">Systematic interpretation</p><h2>Musculoskeletal Imaging Principles</h2><p>Practical lesion analysis built around a repeatable search pattern.</p></div>
+          <div class="list-stack">
+            <button class="row-card" data-detail="radiographic-basics"><span class="thumb xray-thumb">XR</span><span><b>Radiographic Basics</b><small>Positioning · systematic approach</small></span><i>›</i></button>
+            <button class="row-card" data-detail="bone-lesion-analysis"><span class="thumb xray-thumb">◉</span><span><b>Bone Lesion Analysis</b><small>Age · location · matrix · margins · periosteum</small></span><i>›</i></button>
+            <button class="row-card" data-detail="zone-transition"><span class="thumb xray-thumb">↔</span><span><b>Zone of Transition</b><small>Narrow vs wide · lesion behavior</small></span><i>›</i></button>
+            <button class="row-card" data-detail="periosteal-reaction"><span class="thumb xray-thumb">≋</span><span><b>Periosteal Reaction</b><small>Solid · lamellated · spiculated · interrupted</small></span><i>›</i></button>
+            <button class="row-card" data-detail="matrix"><span class="thumb xray-thumb">◇</span><span><b>Matrix</b><small>Osteoid · chondroid · fibrous · fluid · fat</small></span><i>›</i></button>
+            <button class="row-card" data-detail="ct"><span class="thumb xray-thumb">CT</span><span><b>CT</b><small>Cortex · mineralization · fracture · 3D anatomy</small></span><i>›</i></button>
+            <button class="row-card" data-detail="mri"><span class="thumb xray-thumb">MR</span><span><b>MRI</b><small>Marrow · soft tissue · neurovascular relationships</small></span><i>›</i></button>
+            <button class="row-card" data-detail="nuclear"><span class="thumb xray-thumb">NM</span><span><b>Nuclear Medicine / PET</b><small>Indications · interpretation · staging role</small></span><i>›</i></button>
+            <button class="row-card" data-detail="tumor-mimics"><span class="thumb xray-thumb">!</span><span><b>Tumor Mimics</b><small>Common pitfalls</small></span><i>›</i></button>
+            <button class="row-card" data-detail="imaging-checklist"><span class="thumb">☑</span><span><b>Imaging Checklist</b><small>Step-by-step lesion approach</small></span><i>›</i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="page" data-title="Quiz">
+        <div class="page-pad"><div class="section-heading"><p class="kicker">Learning</p><h2>Test Your Knowledge</h2><p>The quiz shell is ready for source-grounded questions as we add content.</p></div>
+          <div class="quiz-grid">
+            <button class="quiz-card"><b>10 Quick Questions</b><small>Mixed review</small></button>
+            <button class="quiz-card"><b>Custom Quiz</b><small>Choose topics, difficulty, and count</small></button>
+            <button class="quiz-card"><b>My Missed Questions</b><small>Focus on weak areas</small></button>
+            <button class="quiz-card"><b>Favorites Quiz</b><small>Study saved topics</small></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="detail" class="page" data-title="Reference">
+        <div class="page-pad" id="detailContent"></div>
+      </section>
+    </main>
+
+    <nav id="bottomNav" class="bottom-nav">
+      <button class="bottom-item active" data-page="home"><span>⌂</span><small>Home</small></button>
+      <button class="bottom-item" data-page="search"><span>⌕</span><small>Search</small></button>
+      <button class="bottom-item" data-page="favorites"><span>☆</span><small>Favorites</small></button>
+      <button class="bottom-item" id="themeToggle"><span>◐</span><small>Theme</small></button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,34 +1,15 @@
-# Orthopaedic Oncology Pocket Guide
+# OrthoPearls v3
 
-A lightweight installable PWA designed for GitHub Pages and iPhone.
+Functional design build for the OrthoPearls orthopaedic oncology PWA.
 
-## Deploy with GitHub Pages
-1. Create a new GitHub repository.
-2. Upload/push everything in this folder to the repository root.
-3. In GitHub: Settings → Pages.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose `main` and `/ (root)`, then Save.
-6. Open the published URL in **Safari** on your iPhone.
-7. Tap **Share → Add to Home Screen → Add**.
+## Deploy to the existing GitHub Pages repo
+1. Upload the contents of this folder to the root of the existing OrthoPearls repository.
+2. Replace the old `index.html`, `styles.css`, `app.js`, `manifest.webmanifest`, `sw.js`, and `icons/` files.
+3. Commit the changes.
+4. GitHub Pages will redeploy automatically.
+5. If the iPhone Home Screen app briefly shows the prior version, fully close it and reopen it. The service-worker cache version was changed for v3.
 
-## Local test
-Because service workers require HTTP/HTTPS, do not test by double-clicking `index.html`.
-Run a small local server, for example:
+## Content note
+This build establishes the navigation, visual system, favorites, search, section structure, and reusable reference-page template. Detailed source-grounded educational content can be populated incrementally without redesigning the app.
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Clinical safety
-This prototype is for clinician education/reference only. Verify clinical content against current institutional protocols and specialty guidance. Do not store PHI in this app unless you later add an appropriately secured, compliant backend and institutional approval.
-
-## Suggested next features
-- Expanded tumor library
-- Custom favorites
-- Post-op surveillance schedules
-- Bone lesion differential helper
-- Sarcoma staging reference
-- Patient education handouts
-- Secure sign-in/backend only if truly needed
+Do not store PHI in this static GitHub Pages application.
